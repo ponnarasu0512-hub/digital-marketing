@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-numbers: "Space Grotesk", sans-serif;
+  
+  --color-brand-black: #000000;
+  --color-brand-bg: #050506;
+  --color-brand-secondary: #0f0f10;
+  --color-brand-accent: #ff2d2d;
+  --color-brand-accent-light: #ff5050;
+  --color-brand-gray: #A7A7A7;
+  --color-brand-card: rgba(255, 255, 255, 0.04);
+  --color-brand-glass: rgba(255, 255, 255, 0.08);
+}
+
+@utility text-glow {
+  text-shadow: 0 0 10px rgba(255, 45, 45, 0.4), 0 0 20px rgba(255, 45, 45, 0.2);
+}
+
+@utility box-glow {
+  box-shadow: 0 0 25px rgba(255, 45, 45, 0.15), inset 0 0 15px rgba(255, 255, 255, 0.02);
+}
+
+@utility box-glow-strong {
+  box-shadow: 0 0 40px rgba(255, 45, 45, 0.35);
+}
+
+@utility glassmorphism {
+  background: rgba(15, 15, 16, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@utility glassmorphism-light {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050506;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff2d2d;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5050;
+}
+
+/* Base Body Styles */
+body {
+  background-color: #050506;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+}
+
+/* Background noise texture */
+.noise-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  opacity: 0.035;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
