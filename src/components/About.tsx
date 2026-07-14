@@ -39,12 +39,14 @@ export default function About() {
   const [activeTab, setActiveTab] = useState<"mission" | "vision" | "values">("mission");
 
   const pillars = [
-    { icon: Cpu, title: "AI-Driven Marketing", desc: "Using deep predictive models to identify high-intent cohorts before competitors." },
-    { icon: TrendingUp, title: "Data Analytics", desc: "No vanity metrics. We construct live attribution funnels tied directly to cash flow." },
-    { icon: Award, title: "Creative Strategy", desc: "Awwwards-quality premium visuals designed to establish absolute sector trust." },
-    { icon: Users, title: "Brand Positioning", desc: "Carving distinct narrative segments for founders and institutions alike." },
-    { icon: Flame, title: "ROI Focused", desc: "Surgical spend optimization built to maximize lead speed and ad ROAS." },
-    { icon: Clock, title: "Dedicated Support", desc: "A direct client communication hub operating with sub-hour response speeds." }
+    { icon: Cpu, title: "Creative Thinking", desc: "Unleashing bold, out-of-the-box creative ideas that make your brand stand out." },
+    { icon: TrendingUp, title: "Performance Marketing", desc: "Surgical ad spend optimization engineered to maximize lead velocity and return on ad spend." },
+    { icon: Target, title: "Data Driven Strategy", desc: "No guesswork. Every campaign and asset is optimized against real conversion data." },
+    { icon: Users, title: "Experienced Team", desc: "A collective of specialized content creators, video editors, and digital marketers." },
+    { icon: Clock, title: "Fast Delivery", desc: "Rapid asset generation and campaign deployment operating with sub-day onboarding velocity." },
+    { icon: Shield, title: "Dedicated Support", desc: "Operative WhatsApp and direct communications with ultra-fast, dedicated response teams." },
+    { icon: Award, title: "Affordable Solutions", desc: "Premium digital agency value streamlined to support startups, creators, and scale-ups." },
+    { icon: Flame, title: "Results Focused", desc: "Obsessed with metrics that matter: click-through rates, client acquisition costs, and total revenue." }
   ];
 
   return (
@@ -82,13 +84,16 @@ export default function About() {
             {/* Right Information Block */}
             <div className="lg:col-span-7 flex flex-col justify-center">
               <span className="font-sans text-[10px] font-black tracking-widest text-brand-accent uppercase block mb-3">
-                ABOUT AXOWEB
+                About ACT ON Creation
               </span>
               <h2 className="font-display text-3xl md:text-4xl font-black tracking-tight text-white leading-tight">
-                We Combine Strategy, Creativity &amp; Technology
+                About ACT ON Creation
               </h2>
               <p className="mt-4 text-brand-gray text-xs md:text-sm font-medium leading-relaxed">
-                AXOWEB is a modern, high-performance agency. We don’t run passive campaigns. We engineer cohesive digital networks that capture consumer consciousness and accelerate conversions. 
+                ACT ON Creation is a creative-first digital agency dedicated to helping brands grow through innovative marketing strategies, engaging visual content, and impactful digital experiences.
+              </p>
+              <p className="mt-2 text-brand-gray text-xs md:text-sm font-medium leading-relaxed">
+                We combine creativity, storytelling, branding, and performance marketing to build brands that people remember and trust.
               </p>
 
               {/* Core Checklists */}
@@ -207,17 +212,17 @@ export default function About() {
           </div>
         </div>
 
-        {/* Bento Grid: Why Choose Axoweb */}
+        {/* Bento Grid: Why Choose ACT ON Creation */}
         <div className="mt-24">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="font-sans text-[10px] font-black tracking-widest text-brand-accent uppercase block mb-3">
-              THE AXOWEB ADVANTAGE
+              THE ACT ON ADVANTAGE
             </span>
             <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-white">
-              Why Choose Axoweb?
+              Why Choose Us
             </h2>
             <p className="mt-3 text-brand-gray text-xs">
-              We replace guesswork with high-fidelity performance metrics. Here is how we separate your brand from the noise.
+              We replace guesswork with creative depth and high-performance execution. Here is how we separate your brand from the noise.
             </p>
           </div>
 

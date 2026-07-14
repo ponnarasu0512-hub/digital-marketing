@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Eye, ShieldAlert, FileText, Play, Gauge, TrendingUp } from "lucide-react";
+import { Eye, FileText, Compass, Play, Target, Gauge, TrendingUp } from "lucide-react";
 
 export default function TimelineProcess() {
   const [activeStep, setActiveStep] = useState<number>(0);
@@ -8,45 +8,52 @@ export default function TimelineProcess() {
   const steps = [
     {
       title: "Discovery",
-      japanese: "発見と分析",
+      japanese: "発見と現状分析",
       icon: Eye,
-      desc: "Deep intelligence audits of your current search footprint, demographic clusters, and competitor marketing inefficiencies.",
-      time: "Days 1 - 5"
+      desc: "Deep intelligence audits of your current brand footprint, competitor strategies, and target audience demographic segments.",
+      time: "Step 1"
+    },
+    {
+      title: "Research",
+      japanese: "詳細調査",
+      icon: FileText,
+      desc: "Analyzing high-retention content hooks, search trends, and successful industry ad funnels to build our foundational playbook.",
+      time: "Step 2"
     },
     {
       title: "Strategy",
       japanese: "戦略設計",
-      icon: ShieldAlert,
-      desc: "Constructing algorithm-defying conversion maps, high-ticket positioning models, and paid acquisition funnel frameworks.",
-      time: "Days 6 - 10"
+      icon: Compass,
+      desc: "Constructing algorithm-defying conversion pathways, high-ticket branding architectures, and scalable performance ad models.",
+      time: "Step 3"
     },
     {
-      title: "Planning",
-      japanese: "詳細計画",
-      icon: FileText,
-      desc: "Scripting visual hooks, designing premium wireframes, laying out content calendars, and configuring technical setup nodes.",
-      time: "Days 11 - 15"
-    },
-    {
-      title: "Execution",
-      japanese: "実行とローンチ",
+      title: "Content Creation",
+      japanese: "コンテンツ制作",
       icon: Play,
-      desc: "Deploying high-fidelity conversion landing pages, launch of custom paid advertising grids, and LinkedIn copywriting pipelines.",
-      time: "Days 16 - 20"
+      desc: "Fusing premium video editing, dynamic motion graphics, scroll-stopping social media creatives, and cohesive copywriting.",
+      time: "Step 4"
+    },
+    {
+      title: "Campaign Launch",
+      japanese: "ローンチ",
+      icon: Target,
+      desc: "Launching multi-channel marketing campaigns across Meta, Google, and curated organic visual loops with deep conversion tracking.",
+      time: "Step 5"
     },
     {
       title: "Optimization",
       japanese: "最適化ループ",
       icon: Gauge,
-      desc: "Analyzing cohort retention logs, executing technical split-tests, and restructuring campaign bids to maximize ROAS velocity.",
-      time: "Days 21 - 25"
+      desc: "Surgically split-testing ad creative variations, adjusting bidding structures, and analyzing cohort engagement logs to maximize ROAS.",
+      time: "Step 6"
     },
     {
-      title: "Scaling",
-      japanese: "規模拡大と支配",
+      title: "Growth",
+      japanese: "規模拡大と成長",
       icon: TrendingUp,
-      desc: "Aggressive budget amplification, placing brand stories in authoritative media outlets, and unlocking automated lead pipelines.",
-      time: "Days 26 - 30"
+      desc: "Aggressive budget scale-ups, organic brand placement authority expansion, and fully automated customer acquisition streams.",
+      time: "Step 7"
     }
   ];
 

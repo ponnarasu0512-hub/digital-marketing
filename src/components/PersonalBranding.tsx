@@ -138,7 +138,7 @@ export default function PersonalBranding() {
                     <Award className="w-6 h-6 text-brand-accent" />
                   </div>
                   <span className="text-xs font-black text-white block uppercase tracking-widest mb-1">
-                    AXOWEB VIP GRID
+                    ACT ON VIP GRID
                   </span>
                   <p className="text-[11px] text-brand-gray font-semibold leading-relaxed">
                     Personalized consultation with elite specialists. Sub-day onboarding.

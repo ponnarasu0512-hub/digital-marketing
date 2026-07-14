@@ -2,130 +2,143 @@ import { ServiceItem, PortfolioProject, TestimonialItem, TeamMemberItem, BlogPos
 
 export const servicesData: ServiceItem[] = [
   {
+    id: "content-creation",
+    title: "Content Creation",
+    description: "Build a highly engaging visual presence with professional social media content and creative campaigns that tell your brand's unique story.",
+    iconName: "Sparkles",
+    details: ["Professional social media content", "Creative campaigns", "Reels", "Graphics", "Visual storytelling"]
+  },
+  {
+    id: "video-editing",
+    title: "Video Editing",
+    description: "Elevate your long and short-form video content with cinematic post-production, motion graphics, and engaging audio design.",
+    iconName: "Play",
+    details: ["YouTube videos", "Instagram Reels", "Commercial videos", "Corporate videos", "Podcast editing", "Motion graphics"]
+  },
+  {
+    id: "social-media-marketing",
+    title: "Social Media Marketing",
+    description: "Cultivate hyper-active online communities and scale your accounts organically with custom high-impact platform playbooks.",
+    iconName: "Instagram",
+    details: ["Instagram Marketing", "Facebook Marketing", "LinkedIn Marketing", "YouTube Growth", "Social Media Strategy"]
+  },
+  {
+    id: "content-planning",
+    title: "Content Planning",
+    description: "End-to-end management, scheduling, and profile optimizations designed to foster growth and streamline monthly operations.",
+    iconName: "Calendar",
+    details: ["Social Media Management", "Content Scheduling", "Community Management", "Profile Optimization", "Growth Strategy", "Monthly Reports", "Audience Engagement"]
+  },
+  {
+    id: "branding",
+    title: "Branding",
+    description: "Establish absolute authority and trust with cohesive logo systems, visual guidelines, and high-end brand identities.",
+    iconName: "Award",
+    details: ["Brand Identity", "Logo Design", "Visual Identity", "Brand Guidelines", "Packaging Design", "Business Profiles"]
+  },
+  {
+    id: "creative-design",
+    title: "Creative Design",
+    description: "Aesthetic marketing collateral ranging from posters, flyers, advertisement graphics, to high-fidelity website imagery.",
+    iconName: "Palette",
+    details: ["Posters", "Flyers", "Social Media Creatives", "Advertisement Designs", "Brochures", "Website Graphics"]
+  },
+  {
     id: "digital-marketing",
     title: "Digital Marketing",
-    description: "Data-driven marketing campaigns that scale conversions and accelerate multi-channel growth velocities.",
-    iconName: "TrendingUp",
-    details: ["Growth Strategy Maps", "Funnel Architecture", "Conversion Rate Optimization", "Analytical Intelligence"]
+    description: "Surgical lead generation, Search Engine Optimization (SEO), programmatic email systems, and multi-channel marketing automation.",
+    iconName: "Globe",
+    details: ["Search Engine Optimization (SEO)", "Google Ads", "Meta Ads", "Lead Generation", "Email Marketing", "Marketing Automation"]
   },
   {
-    id: "personal-branding",
-    title: "Personal Branding",
-    description: "Positioning founders, creators, and CEOs as leading industry voices with authority and influence.",
-    iconName: "Award",
-    details: ["LinkedIn Authority grids", "Executive Content Strategy", "Media Placements", "Podcast Sourcing"]
-  },
-  {
-    id: "seo-optimization",
-    title: "SEO Optimization",
-    description: "Dominate search results organically through technically flawless schema architectures and backlink nodes.",
-    iconName: "Search",
-    details: ["Intent-Based Audits", "Core Web Vitals Engineering", "Authority Backlinking", "Local Supremacy Grid"]
-  },
-  {
-    id: "social-media",
-    title: "Social Media Marketing",
-    description: "Fostering loyal brand evangelists on Instagram, LinkedIn, and YouTube through scroll-stopping creative content.",
-    iconName: "Instagram",
-    details: ["Interactive Content Grids", "Algorithm-Defying Playbooks", "Community Nurturing", "Direct Lead Sourcing"]
-  },
-  {
-    id: "paid-advertising",
-    title: "Paid Advertising",
-    description: "Surgical Meta and Google Ads campaigns optimized for maximum return on ad spend (ROAS) and velocity.",
+    id: "performance-marketing",
+    title: "Performance Marketing",
+    description: "High-ROAS Meta and Google ad campaigns optimized daily against deep conversion tracking and analytics telemetry.",
     iconName: "Target",
-    details: ["Bid Optimization Models", "Precision Retargeting", "Ad Creative Pipelines", "ROI Telemetry Boards"]
-  },
-  {
-    id: "web-development",
-    title: "Website Development",
-    description: "Awwwards-grade custom front-ends that combine buttery-smooth interaction physics with conversions.",
-    iconName: "Code",
-    details: ["React & Framer Physics", "SEO Semantic Codebases", "Interactive Product Journeys", "Mobile-First Fluidity"]
-  },
-  {
-    id: "ai-automation",
-    title: "AI Automation",
-    description: "Automate lead generation and operations using next-generation intelligent conversational pipelines.",
-    iconName: "Cpu",
-    details: ["Autonomous CRM Workflows", "Intelligent Chat Nodes", "Scraping & Lead Harvesters", "Workflow Synthesis"]
-  },
-  {
-    id: "lead-generation",
-    title: "Lead Generation",
-    description: "Populating your sales pipeline with highly qualified executive decision-makers ready to close.",
-    iconName: "Users",
-    details: ["SDR Outbound Systems", "Premium Gated Content", "Webinar Funnels", "High-Value Calendly Slots"]
-  },
-  {
-    id: "video-marketing",
-    title: "Video Marketing",
-    description: "Cinematic short-form reels, TikToks, and YouTube videos designed to maximize retention and visual viral coefficients.",
-    iconName: "Play",
-    details: ["Script Hook Blueprints", "Dynamic Cyberpunk Visuals", "Audio Accent Design", "Viral Hooks Integration"]
+    details: ["Meta Advertising", "Google Advertising", "Campaign Optimization", "Conversion Tracking", "Remarketing Campaigns", "Analytics Reporting"]
   }
 ];
 
 export const portfolioData: PortfolioProject[] = [
   {
     id: "proj-1",
-    title: "E-Commerce Growth Campaign",
-    category: "Websites",
-    imageUrl: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80",
-    metrics: "4.8x ROAS • +180% Revenue",
-    description: "An end-to-end redevelopment and paid media takeover for an premium streetwear brand, fusing Japanese aesthetics with optimized checkout pipelines.",
-    deliverables: ["E-Commerce Architecture", "Meta Scaling Grid", "Cinematic Reels Production"],
-    client: "NEO-TOKYO APPAREL"
+    title: "Aura Premium Brand Identity",
+    category: "Branding",
+    imageUrl: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80",
+    metrics: "Cohesive Visual Guidelines • 100% Brand Recall",
+    description: "Crafted a luxury, high-contrast visual identity and brand package system that established immediate sector trust.",
+    deliverables: ["Logo System", "Visual Identity", "Packaging Design"],
+    client: "AURA SKINCARE"
   },
   {
     id: "proj-2",
-    title: "Personal Brand Launch",
-    category: "Personal Branding",
+    title: "Omnipresent LinkedIn Grid",
+    category: "Social Media",
     imageUrl: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80",
-    metrics: "120K LinkedIn • 3 Venture Deals",
-    description: "Transforming a quiet Silicon Valley tech founder into an authoritative visual voice on AI ethics and decentralized venture finance.",
-    deliverables: ["LinkedIn Content Systems", "PR & Speaking Sourcing", "Personal Podcast Setup"],
-    client: "DR. ARISU SATO"
+    metrics: "+150% Organic Inquiries",
+    description: "Engineered a masterfully curated content grid for managing directors to build executive authority on LinkedIn.",
+    deliverables: ["LinkedIn Strategy", "Content Scheduling", "Profile Optimization"],
+    client: "SATO TECHNOLOGIES"
   },
   {
     id: "proj-3",
-    title: "Real Estate Marketing",
-    category: "Ads",
-    imageUrl: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
-    metrics: "+420 High-Net-Worth Leads",
-    description: "Surgical Google Search and YouTube Ads targeting premium penthouse buyers with interactive virtual 3D tours.",
-    deliverables: ["Precision Geo-targeting", "Interactive 3D Landers", "Auto-Dial CRM Connectors"],
-    client: "SHINJUKU SKYE RESIDENCES"
+    title: "High-Retention Visual Storytelling",
+    category: "Content Creation",
+    imageUrl: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80",
+    metrics: "10M+ Combined Views",
+    description: "Designed an interactive creative campaign using Reels, graphics, and scroll-stopping visual storytelling.",
+    deliverables: ["Reels Design", "Creative Campaigns", "Custom Graphics"],
+    client: "CREATIVE HUB"
   },
   {
     id: "proj-4",
-    title: "Social Media Strategy",
-    category: "Social Media",
-    imageUrl: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80",
-    metrics: "+15M Views • 240K Followers",
-    description: "Designing a high-retention short-form video pipeline utilizing cyberpunk visuals, synth wave loops, and hyper-kinetic hooks.",
-    deliverables: ["Short-form Scripting", "3D Motion Elements", "Influencer Seed Matrices"],
-    client: "NIGHT CITY ELECTRONICS"
+    title: "Cinematic YouTube & Reels Pipeline",
+    category: "Video Editing",
+    imageUrl: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80",
+    metrics: "95% Average View Retention",
+    description: "Cinematic video editing and motion graphics post-production for high-performing long and short-form videos.",
+    deliverables: ["YouTube Post-Production", "Instagram Reels Editing", "Motion Graphics"],
+    client: "VELOCITY MEDIA"
   },
   {
     id: "proj-5",
-    title: "Fitness Brand Promotion",
-    category: "Branding",
-    imageUrl: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80",
-    metrics: "+300% Member Influx",
-    description: "A complete visual rebrand of a boutique premium boxing gym. Blended gritty neon brutalism details with high-end luxury storytelling.",
-    deliverables: ["Brand Guideline Framework", "Interactive Booking UI", "Local SEO Maps Domination"],
-    client: "KAIZEN FIGHT CLUB"
+    title: "Creative Launch Campaign",
+    category: "Marketing Campaigns",
+    imageUrl: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80",
+    metrics: "3.2x Campaign ROI",
+    description: "An end-to-end promotional launch campaign combining creative design, influencer coordination, and email funnels.",
+    deliverables: ["Campaign Strategy", "Social Media Creatives", "Email Marketing"],
+    client: "NEXUS APPAREL"
   },
   {
     id: "proj-6",
-    title: "Local Business SEO",
-    category: "SEO",
-    imageUrl: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-    metrics: "Rank #1 for 45 Local Keywords",
-    description: "Targeted localized technical SEO overhauls coupled with hyper-targeted citations to establish total organic presence in Chennai.",
-    deliverables: ["Schema Markup Node Injection", "Review Velocity Automation", "Backlink Velocity Grid"],
-    client: "CHENTEC MEDICAL SYSTEMS"
+    title: "High-Intent Google Search Domination",
+    category: "Google Ads",
+    imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80",
+    metrics: "+300% High-Value Leads",
+    description: "Surgical Google Search, Display, and Performance Max campaigns targeting high-intent decision-makers.",
+    deliverables: ["Keyword Research", "Performance Max", "Conversion Tracking"],
+    client: "APEX CORP"
+  },
+  {
+    id: "proj-7",
+    title: "High-ROAS Meta Advertising Grid",
+    category: "Meta Ads",
+    imageUrl: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
+    metrics: "5.2x All-Time High ROAS",
+    description: "Scale-driven Meta advertising campaigns optimized using precision cohort targeting and landing page funnels.",
+    deliverables: ["Facebook Ads", "Instagram Ads", "Ad Campaign Mastery"],
+    client: "SKINCARE DIRECT"
+  },
+  {
+    id: "proj-8",
+    title: "Awwwards-Quality Web Architecture",
+    category: "Web Design",
+    imageUrl: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80",
+    metrics: "Sub-0.5s Load Velocity",
+    description: "A luxury glassmorphism React website combining smooth interaction physics with high-converting layouts.",
+    deliverables: ["React Front-end", "Framer Physics", "SEO Schema Injection"],
+    client: "KAIZEN INTERACTIVES"
   }
 ];
 
@@ -135,7 +148,7 @@ export const testimonialsData: TestimonialItem[] = [
     name: "Arisato Takahashi",
     role: "Managing Director",
     company: "Sato Technologies",
-    quote: "AXOWEB completely overhauled our brand presence. Within 3 months, our organic inquiries surged by 150%, and our paid campaigns hit an all-time high ROAS of 5.2x. Their team possesses an elite understanding of visual aesthetics and marketing math.",
+    quote: "ACT ON Creation completely overhauled our brand presence. Within 3 months, our organic inquiries surged by 150%, and our paid campaigns hit an all-time high ROAS of 5.2x. Their team possesses an elite understanding of visual aesthetics and marketing math.",
     rating: 5,
     avatarUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"
   },
@@ -144,7 +157,7 @@ export const testimonialsData: TestimonialItem[] = [
     name: "Sarah Jenkins",
     role: "Founder",
     company: "Aura Skincare",
-    quote: "As a creator, establishing a cohesive personal brand on LinkedIn felt overwhelming. AXOWEB took the reins, designed an absolute masterpiece of a content grid, and booked me on two major national tech podcasts. Life-changing experience.",
+    quote: "As a creator, establishing a cohesive personal brand on LinkedIn felt overwhelming. ACT ON Creation took the reins, designed an absolute masterpiece of a content grid, and booked me on two major national tech podcasts. Life-changing experience.",
     rating: 5,
     avatarUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80"
   },
@@ -164,7 +177,7 @@ export const teamData: TeamMemberItem[] = [
     id: "team-1",
     name: "Arjun Prakash",
     role: "Founder & CEO",
-    imageUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80", // Using stylish avatar
+    imageUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
     bio: "Ex-Big 4 Marketing Strategist with over 10 years of scaling high-velocity startups. Arjun fuses business engineering with premium creative aesthetics.",
     specialties: ["Venture Scale Mechanics", "Brand Placement Architecture", "Omnichannel Funnel Integration"]
   },
@@ -203,7 +216,7 @@ export const blogPostsData: BlogPostItem[] = [
     date: "July 12, 2026",
     readTime: "5 min read",
     imageUrl: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=500&q=80",
-    content: "The marketing landscape of 2026 is governed by AI agent frameworks and hyper-personalized visual grids. Brands that rely on generic templated copy are seeing click-through rates plunge by 80%. Survival requires algorithm-defying authentic visual identities and custom vector embeddings to intercept high-intent buyers..."
+    content: "The marketing landscape of 2026 is governed by AI agent frameworks and hyper-personalized visual grids. Brands that rely on generic copy are seeing click-through rates plunge. Survival requires algorithm-defying authentic visual identities and custom vector embeddings to intercept high-intent buyers..."
   },
   {
     id: "blog-2",
@@ -230,22 +243,32 @@ export const blogPostsData: BlogPostItem[] = [
 export const faqsData: FaqItem[] = [
   {
     id: "faq-1",
-    question: "How long does it take to see tangible marketing results?",
-    answer: "For Paid Advertising (Meta/Google), optimization loops conclude within 14 days, with initial leads launching within the first 48 hours. For organic Search Engine Supremacy (SEO) and Personal Branding, expect exponential scaling and authority positioning within 60 to 90 days."
+    question: "What services do you provide?",
+    answer: "ACT ON Creation offers Content Creation, Video Editing, Social Media Marketing, Content Planning, Branding, Creative Design, Digital Marketing, and Performance Marketing services, along with Professional Digital Marketing Courses."
   },
   {
     id: "faq-2",
-    question: "What makes AXOWEB different from a standard agency?",
-    answer: "Standard agencies guess; we engineer. We merge high-fidelity luxury cyberpunk aesthetics (for unbeatable conversion visual psychology) with rigid data science. Every design choice is backed by cognitive conversion math, and our AI automation grids are custom-built server-side to slash your SDR expenses."
+    question: "How long does a project take?",
+    answer: "Most creative design and branding assets are ready within 1 to 2 weeks. Video editing and social media campaigns onboard within 48 to 72 hours, and digital ad campaigns launch optimization loops in under 14 days."
   },
   {
     id: "faq-3",
-    question: "Do you offer custom enterprise marketing packages?",
-    answer: "Absolutely. While our Starter, Growth, and Premium plans align with most high-growth models, we custom-architect omnichannel grids for Fortune-level brands, high-net-worth creators, and Series-A tech companies. Contact us for custom pipeline scoping."
+    question: "Do you manage social media monthly?",
+    answer: "Yes! We offer monthly retainer services covering complete Social Media Management, Content Planning, Content Scheduling, Community Management, Profile Optimization, Monthly Reports, and Audience Engagement."
   },
   {
     id: "faq-4",
-    question: "How does the Strategy Session booking work?",
-    answer: "Select a date and hour grid on our consultation calendar, and input your business telemetry. Our systems auto-provision a Google Calendar meeting with a specialized partner who will review your brand and deliver a custom 30-day scaling blueprint during the call."
+    question: "Do you provide Meta Ads services?",
+    answer: "Absolutely. We build, manage, and optimize scale-driven Meta Ads (Facebook & Instagram Ads) focusing on surgical cohort targeting, creative ad design, Conversion Tracking, Remarketing, and maximizing your return on ad spend (ROAS)."
+  },
+  {
+    id: "faq-5",
+    question: "Can you create video content?",
+    answer: "Yes, Content Creation and Video Editing are our primary strengths. We create professional social media videos, YouTube videos, Instagram Reels, Commercial videos, Corporate videos, and Podcast edits accompanied by premium motion graphics."
+  },
+  {
+    id: "faq-6",
+    question: "Do you offer training courses?",
+    answer: "Yes! We offer specialized, real-world Professional Digital Marketing Courses. This includes our Digital Marketing Masterclass, Meta Ads Campaign Mastery, Google Ads keyword & search modules, Funnel Marketing, Video Editing, and Content Creation."
   }
 ];

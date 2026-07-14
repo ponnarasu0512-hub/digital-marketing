@@ -1,5 +1,6 @@
 import React from "react";
-import { ArrowUp, Mail, Phone, MapPin, Instagram, Linkedin, Twitter, Youtube, MessageCircle, Heart } from "lucide-react";
+import { ArrowUp, Mail, Phone, MapPin, Instagram, Linkedin, Twitter, Youtube, MessageCircle } from "lucide-react";
+import Logo from "./Logo";
 
 interface FooterProps {
   onBookClick: () => void;
@@ -21,16 +22,14 @@ export default function Footer({ onBookClick }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
           
           {/* Column 1: Logo & Tagline */}
-          <div className="lg:col-span-4 space-y-6">
-            <div className="flex items-center space-x-2.5">
-              <span className="font-display text-lg font-black tracking-widest text-white">
-                AXO<span className="text-brand-accent">WEB</span>
-              </span>
+          <div className="lg:col-span-3 space-y-6">
+            <div className="flex items-center">
+              <Logo className="h-9" />
             </div>
             
-            <p className="text-brand-gray text-xs font-semibold leading-relaxed max-w-sm">
-              Build Your Brand. Scale Your Business. Omnipresent Online.<br />
-              The premium growth engine for ambitious leaders, SaaS, and elite creators.
+            <p className="text-brand-gray text-[11px] font-semibold leading-relaxed max-w-xs">
+              We Help Brands Grow Through Creative &amp; Digital Solutions.<br />
+              Creative Marketing • Digital Growth • Content That Converts
             </p>
 
             {/* Social media handles */}
@@ -59,38 +58,48 @@ export default function Footer({ onBookClick }: FooterProps) {
             </div>
           </div>
 
-          {/* Column 2: Navigation Links */}
+          {/* Column 2: Quick Links */}
           <div className="lg:col-span-2 space-y-4">
             <h4 className="text-[10px] font-black text-brand-accent tracking-widest uppercase">
-              QUICK SECTIONS
+              QUICK LINKS
             </h4>
             <ul className="space-y-2 text-xs font-bold text-brand-gray">
-              {["Home", "Services", "About", "Portfolio", "Pricing", "Blog"].map((link) => (
-                <li key={link}>
+              {[
+                { name: "Home", href: "#" },
+                { name: "About", href: "#about" },
+                { name: "Services", href: "#services" },
+                { name: "Courses", href: "#courses" },
+                { name: "Portfolio", href: "#portfolio" },
+                { name: "Testimonials", href: "#testimonials" },
+                { name: "Contact", href: "#booking" }
+              ].map((link) => (
+                <li key={link.name}>
                   <a
-                    href={`#${link.toLowerCase().replace(" ", "-")}`}
+                    href={link.href}
                     className="hover:text-white transition-colors"
                   >
-                    {link}
+                    {link.name}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Column 3: Custom Services */}
-          <div className="lg:col-span-3 space-y-4">
+          {/* Column 3: Services */}
+          <div className="lg:col-span-2 space-y-4">
             <h4 className="text-[10px] font-black text-brand-accent tracking-widest uppercase">
-              SCALING SYSTEMS
+              OUR SERVICES
             </h4>
             <ul className="space-y-2 text-[11px] font-semibold text-brand-gray">
               {[
-                "Digital Marketing & Ads",
-                "SEO Organic Domination",
-                "Social Media Content Blueprint",
-                "Website Development",
-                "Personal Branding suites",
-                "AI Automation Grid"
+                "Content Creation",
+                "Video Editing",
+                "Social Media Marketing",
+                "Content Planning",
+                "Branding",
+                "Creative Design",
+                "Digital Marketing",
+                "Performance Marketing"
               ].map((srv) => (
                 <li key={srv} className="hover:text-white transition-colors cursor-pointer">
                   {srv}
@@ -99,7 +108,28 @@ export default function Footer({ onBookClick }: FooterProps) {
             </ul>
           </div>
 
-          {/* Column 4: Contact details */}
+          {/* Column 4: Courses */}
+          <div className="lg:col-span-2 space-y-4">
+            <h4 className="text-[10px] font-black text-brand-accent tracking-widest uppercase">
+              ACADEMY COURSES
+            </h4>
+            <ul className="space-y-2 text-[11px] font-semibold text-brand-gray">
+              {[
+                "Digital Marketing",
+                "Meta Ads",
+                "Google Ads",
+                "Funnel Marketing",
+                "Video Editing",
+                "Content Creation"
+              ].map((crs) => (
+                <li key={crs} className="hover:text-white transition-colors cursor-pointer">
+                  {crs}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 5: Contact details */}
           <div className="lg:col-span-3 space-y-4">
             <h4 className="text-[10px] font-black text-brand-accent tracking-widest uppercase">
               AGENCY TELEMETRY
@@ -113,8 +143,8 @@ export default function Footer({ onBookClick }: FooterProps) {
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-brand-accent flex-shrink-0" />
-                <a href="mailto:contact@axoweb.com" className="hover:text-white transition-colors">
-                  contact@axoweb.com
+                <a href="mailto:contact@actoncreations.com" className="hover:text-white transition-colors">
+                  contact@actoncreation.com
                 </a>
               </li>
               <li className="flex items-start space-x-3">
@@ -138,7 +168,7 @@ export default function Footer({ onBookClick }: FooterProps) {
         {/* Bottom border & Copy area */}
         <div className="border-t border-white/5 pt-8 mt-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-[10px] font-bold text-brand-gray tracking-wider uppercase">
-            © {currentYear} AXOWEB. ALL RIGHTS RESERVED • CODES COMPILED LIVE
+            © {currentYear} ACT ON CREATION. ALL RIGHTS RESERVED • CODES COMPILED LIVE
           </div>
           
           <div className="flex items-center space-x-6 text-[10px] font-bold text-brand-gray tracking-wider uppercase">

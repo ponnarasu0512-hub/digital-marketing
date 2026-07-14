@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Services from "./components/Services";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
+import Courses from "./components/Courses";
 import PersonalBranding from "./components/PersonalBranding";
 import TimelineProcess from "./components/TimelineProcess";
 import Pricing from "./components/Pricing";
@@ -13,6 +14,7 @@ import FAQ from "./components/FAQ";
 import Blog from "./components/Blog";
 import BookingForm from "./components/BookingForm";
 import Chatbot from "./components/Chatbot";
+import WhatsAppButton from "./components/WhatsAppButton";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -53,6 +55,9 @@ export default function App() {
         {/* Portfolio Category Showcase Grid + Case details modal */}
         <Portfolio />
 
+        {/* Professional Digital Marketing Academy Courses */}
+        <Courses />
+
         {/* Dedicated Executive Personal Branding Matrix */}
         <PersonalBranding />
 
@@ -83,6 +88,9 @@ export default function App() {
 
       {/* Chatbot Assistant */}
       <Chatbot />
+
+      {/* WhatsApp Floating Button */}
+      <WhatsAppButton />
     </div>
   );
 }

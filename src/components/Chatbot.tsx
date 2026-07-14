@@ -15,7 +15,7 @@ export default function Chatbot() {
     {
       id: "init",
       sender: "bot",
-      text: "Hi 👋 I'm Axo AI. How can I help grow your business today?"
+      text: "Hi 👋 I'm Act On AI. How can I help grow your brand and scale your business today?"
     }
   ]);
   const [inputValue, setInputValue] = useState("");
@@ -23,11 +23,11 @@ export default function Chatbot() {
   const messageEndRef = useRef<HTMLDivElement | null>(null);
 
   const suggestedQuestions = [
-    "Website Pricing",
-    "SEO Packages",
-    "Book Consultation",
-    "Personal Branding",
-    "Generate Leads"
+    "Academy Courses",
+    "Content Creation",
+    "Meta Ads Pricing",
+    "Book Strategy Session",
+    "Video Editing"
   ];
 
   useEffect(() => {
@@ -139,7 +139,7 @@ export default function Chatbot() {
                 </div>
                 <div>
                   <h3 className="font-display text-xs font-black text-white tracking-wide flex items-center gap-1.5">
-                    Axo AI <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    Act On AI <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                   </h3>
                   <span className="text-[9px] font-bold text-brand-gray uppercase tracking-widest block">
                     Growth Concierge
@@ -229,7 +229,7 @@ export default function Chatbot() {
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
-                placeholder="Ask Axo AI anything..."
+                placeholder="Ask Act On AI anything..."
                 className="flex-1 bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-xs font-semibold text-white focus:outline-none focus:border-brand-accent/40 transition-colors"
                 disabled={isLoading}
               />

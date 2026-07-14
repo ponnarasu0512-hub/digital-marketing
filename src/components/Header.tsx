@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Phone, MessageSquare, Menu, X, ArrowUpRight } from "lucide-react";
+import Logo from "./Logo";
 
 interface HeaderProps {
   onBookClick: () => void;
@@ -26,11 +27,12 @@ export default function Header({ onBookClick }: HeaderProps) {
     { name: "Home", href: "#home" },
     { name: "Services", href: "#services" },
     { name: "Portfolio", href: "#portfolio" },
+    
     { name: "About", href: "#about" },
     { name: "Personal Branding", href: "#personal-branding" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Blog", href: "#blog" },
-    { name: "Contact", href: "#contact" }
+    
+    
+    { name: "Contact", href: "#booking" }
   ];
 
   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -63,11 +65,8 @@ export default function Header({ onBookClick }: HeaderProps) {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" className="flex items-center space-x-2 group">
-            <span className="font-display text-2xl font-black tracking-tighter text-white flex items-center gap-1.5">
-              AXO<span className="text-brand-accent group-hover:text-brand-accent-light transition-colors">WEB</span>
-            </span>
-            <div className="w-2 h-2 rounded-full bg-brand-accent animate-pulse" />
+          <a href="#home" className="flex items-center space-x-2">
+            <Logo className="h-9" />
           </a>
 
           {/* Desktop Navigation */}
@@ -90,7 +89,7 @@ export default function Header({ onBookClick }: HeaderProps) {
           {/* Right Side Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
-              href="https://wa.me/918015383591?text=Hello%20Axoweb,%20I%20want%20to%20grow%20my%20business%20through%20Digital%20Marketing.%20Can%20we%20discuss?"
+              href="https://wa.me/919876543210?text=Hello%20ACT%20ON%20Creation,%20I%20want%20to%20grow%20my%20business%20through%20Digital%20Marketing.%20Can%20we%20discuss?"
               target="_blank"
               rel="noreferrer"
               className="flex items-center space-x-1 text-xs font-bold tracking-wider uppercase text-brand-gray hover:text-emerald-400 transition-colors py-2"
@@ -146,7 +145,7 @@ export default function Header({ onBookClick }: HeaderProps) {
               ))}
               <div className="pt-4 border-t border-white/5 flex flex-col space-y-3">
                 <a
-                  href="https://wa.me/918015383591?text=Hello%20Axoweb,%20I%20want%20to%20grow%20my%20business%20through%20Digital%20Marketing.%20Can%20we%20discuss?"
+                  href="https://wa.me/919876543210?text=Hello%20ACT%20ON%20Creation,%20I%20want%20to%20grow%20my%20business%20through%20Digital%20Marketing.%20Can%20we%20discuss?"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-center space-x-2 px-3 py-3 rounded-lg bg-emerald-500/10 text-emerald-400 font-bold text-xs tracking-wider uppercase transition-colors"

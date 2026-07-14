@@ -40,8 +40,8 @@ export default function Services({ onBookClick }: ServicesProps) {
           className="bg-white text-brand-black rounded-[40px] px-6 py-16 md:p-16 shadow-2xl relative overflow-hidden"
         >
           {/* Subtle light watermarks */}
-          <div className="absolute right-0 bottom-0 text-[180px] font-display font-black text-black/[0.02] leading-none pointer-events-none select-none tracking-tighter">
-            AXOWEB
+          <div className="absolute right-0 bottom-0 text-[100px] md:text-[140px] font-display font-black text-black/[0.02] leading-none pointer-events-none select-none tracking-tighter">
+            ACT ON CREATIONS
           </div>
 
           <div className="max-w-3xl mx-auto text-center mb-16 relative z-10">

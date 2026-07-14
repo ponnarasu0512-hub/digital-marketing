@@ -167,11 +167,11 @@ export default function BookingForm() {
           <div className="lg:col-span-7 bg-brand-secondary/40 border border-white/5 rounded-[30px] p-6 md:p-10 glassmorphism">
             <form onSubmit={handleSubmit} className="space-y-6">
               
-              {/* Row 1: Name and Company */}
+              {/* Row 1: Name and Business Name */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-[10px] font-black text-brand-accent tracking-widest uppercase block">
-                    Full Name *
+                    Name *
                   </label>
                   <input
                     type="text"
@@ -186,11 +186,12 @@ export default function BookingForm() {
 
                 <div className="space-y-2">
                   <label className="text-[10px] font-black text-brand-accent tracking-widest uppercase block">
-                    Company Name
+                    Business Name *
                   </label>
                   <input
                     type="text"
                     name="companyName"
+                    required
                     value={formData.companyName}
                     onChange={handleInputChange}
                     placeholder="Kaizen Inc."
@@ -203,7 +204,7 @@ export default function BookingForm() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-[10px] font-black text-brand-accent tracking-widest uppercase block">
-                    Business Email *
+                    Email *
                   </label>
                   <input
                     type="email"
@@ -218,7 +219,7 @@ export default function BookingForm() {
 
                 <div className="space-y-2">
                   <label className="text-[10px] font-black text-brand-accent tracking-widest uppercase block">
-                    Phone Number *
+                    Phone *
                   </label>
                   <input
                     type="tel"
@@ -232,7 +233,7 @@ export default function BookingForm() {
                 </div>
               </div>
 
-              {/* Row 3: Business Type & Service dropdowns */}
+              {/* Row 3: Business Type & Service Interested In */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-[10px] font-black text-brand-accent tracking-widest uppercase block">
@@ -254,19 +255,23 @@ export default function BookingForm() {
 
                 <div className="space-y-2">
                   <label className="text-[10px] font-black text-brand-accent tracking-widest uppercase block">
-                    Required Scaling Service
+                    Service Interested In *
                   </label>
                   <select
                     name="serviceRequired"
+                    required
                     value={formData.serviceRequired}
                     onChange={handleInputChange}
                     className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-xs font-semibold text-white focus:outline-none focus:border-brand-accent/50 transition-colors"
                   >
-                    <option value="Digital Marketing">Digital Marketing &amp; Ads</option>
-                    <option value="Personal Branding">Personal Branding for Execs</option>
-                    <option value="SEO Supremacy">SEO Organic Domination</option>
-                    <option value="Web Development">Awwwards Web Development</option>
-                    <option value="AI Automation Grid">AI Automation Systems</option>
+                    <option value="Content Creation">Content Creation</option>
+                    <option value="Video Editing">Video Editing</option>
+                    <option value="Social Media Marketing">Social Media Marketing</option>
+                    <option value="Content Planning">Content Planning</option>
+                    <option value="Branding">Branding</option>
+                    <option value="Creative Design">Creative Design</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                    <option value="Performance Marketing">Performance Marketing</option>
                   </select>
                 </div>
               </div>
@@ -300,10 +305,11 @@ export default function BookingForm() {
               {/* Text Message */}
               <div className="space-y-2">
                 <label className="text-[10px] font-black text-brand-accent tracking-widest uppercase block">
-                  How can we help grow your business?
+                  Message *
                 </label>
                 <textarea
                   name="message"
+                  required
                   rows={3}
                   value={formData.message}
                   onChange={handleInputChange}

@@ -59,8 +59,9 @@ app.post("/api/chat", async (req, res) => {
           role: "user",
           parts: [
             {
-              text: `You are "Axo AI", the elite virtual growth partner and AI concierge for AXOWEB, a premier Japanese Cyberpunk styled Digital Marketing & Personal Branding Agency.
-Our Tagline: "Build Your Brand. Scale Your Business. Domnipresent Online."
+              text: `You are "Act On AI", the elite virtual growth partner and AI concierge for ACT ON Creation, a premier Digital Marketing & Personal Branding Agency.
+Our Tagline: "We Help Brands Grow Through Creative & Digital Solutions"
+Alternative Subtitle: "Creative Marketing • Digital Growth • Content That Converts"
 
 Brand Persona:
 - Futuristic, ultra-premium, authoritative, but friendly and direct.
@@ -96,7 +97,7 @@ Current user question: "${message}"`,
     let reply = "";
 
     if (lowerMessage.includes("price") || lowerMessage.includes("pricing") || lowerMessage.includes("cost") || lowerMessage.includes("plan")) {
-      reply = `### AXOWEB Pricing Grid
+      reply = `### ACT ON Creation Pricing Grid
 We offer three scalable tiers tailored to accelerate your growth:
 
 *   🔴 **Starter Plan (₹9,999/mo)**: Perfect for startups and growing creators. Essential SEO, social content framework, and monthly strategy reports.
@@ -132,8 +133,8 @@ Excellent decision. You can lock in a free **30-Minute Growth Session** with our
 
 We will analyze your current brand and hand you a customized 30-day action plan.`;
     } else {
-      reply = `### Welcome to the AXOWEB Growth Grid ⛩️
-I'm **Axo AI**, your premium digital strategist. 
+      reply = `### Welcome to the ACT ON Creation Growth Grid ⛩️
+I'm **Act On AI**, your premium digital strategist. 
 
 I can guide you through:
 *   📈 **Digital Marketing & Ads** (Scaling conversions & ROAS)
@@ -232,10 +233,10 @@ async function initServer() {
   }
 
   app.listen(PORT, "0.0.0.0", () => {
-    console.log(`[AXOWEB Server] Running on http://localhost:${PORT}`);
+    console.log(`[ACT ON Creation Server] Running on http://localhost:${PORT}`);
   });
 }
 
 initServer().catch((err) => {
-  console.error("Failed to initialize AXOWEB fullstack server:", err);
+  console.error("Failed to initialize ACT ON Creation fullstack server:", err);
 });

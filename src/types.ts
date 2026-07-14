@@ -9,7 +9,7 @@ export interface ServiceItem {
 export interface PortfolioProject {
   id: string;
   title: string;
-  category: "Websites" | "Branding" | "SEO" | "Social Media" | "Ads" | "Personal Branding";
+  category: "Branding" | "Social Media" | "Content Creation" | "Video Editing" | "Marketing Campaigns" | "Google Ads" | "Meta Ads" | "Web Design" | "Websites" | "SEO" | "Personal Branding";
   imageUrl: string;
   metrics: string;
   description: string;

@@ -149,58 +149,59 @@ export default function Hero({ onBookClick, onWorkClick }: HeroProps) {
           </motion.div>
 
           {/* Huge typography */}
-          <h1 className="font-display text-4xl sm:text-6xl xl:text-7xl font-black tracking-tight text-white leading-[0.95] flex flex-col">
+          <h1 className="font-display text-4xl sm:text-6xl xl:text-7.5xl font-black tracking-tight text-white leading-[0.95] flex flex-col uppercase">
             <motion.span
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.1 }}
             >
-              DIGITAL
+              We Create.
             </motion.span>
             <motion.span
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-brand-accent text-glow"
             >
-              MARKETING
+              We Market.
             </motion.span>
             <motion.span
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="text-white flex items-center"
+              className="text-brand-accent text-glow"
             >
-              &amp; PERSONAL
-            </motion.span>
-            <motion.span
-              initial={{ x: -100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.7, delay: 0.4 }}
-              className="text-white"
-            >
-              BRANDING
+              We Scale Brands.
             </motion.span>
           </h1>
+
+          {/* Alternative subtitle */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.8 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="mt-4 font-display text-xs sm:text-sm tracking-[0.18em] text-brand-accent font-black uppercase flex items-center gap-2"
+          >
+            <span>Creative Marketing • Digital Growth • Content That Converts</span>
+          </motion.div>
 
           {/* Japanese subtitle */}
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 0.7 }}
+            animate={{ opacity: 0.5 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="mt-4 font-display text-sm tracking-[0.25em] text-brand-gray font-medium flex items-center gap-2"
+            className="mt-2 font-display text-xs tracking-[0.25em] text-brand-gray font-medium flex items-center gap-2"
           >
-            <span>デジタルの力で、ブランドを未来へ。</span>
+            <span>クリエイティブとデジタルの力で、ブランドを成長へと導く。</span>
           </motion.div>
 
-          {/* Tagline */}
+          {/* Tagline / Description */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.5 }}
             className="mt-6 text-brand-gray text-sm sm:text-base max-w-xl font-medium leading-relaxed"
           >
-            We help businesses, startups, creators and professionals dominate online through powerful branding, websites, SEO, social media and performance marketing.
+            ACT ON Creation is a creative digital agency helping businesses, startups, creators, and entrepreneurs build powerful online brands through content creation, strategic marketing, branding, and performance-driven digital campaigns.
           </motion.p>
 
           {/* Action buttons */}
@@ -215,7 +216,7 @@ export default function Hero({ onBookClick, onWorkClick }: HeroProps) {
               className="px-8 py-4 bg-brand-accent hover:bg-brand-accent-light text-white font-sans text-xs font-black tracking-widest uppercase rounded-full shadow-lg shadow-brand-accent/30 transition-all duration-300 hover:scale-105 hover:box-glow-strong flex items-center gap-2"
               id="hero-get-started"
             >
-              <span>Get Started</span>
+              <span>Start Your Project</span>
               <ArrowRight className="w-4 h-4" />
             </button>
 
@@ -229,7 +230,7 @@ export default function Hero({ onBookClick, onWorkClick }: HeroProps) {
                 <span className="absolute inset-0 rounded-full border border-brand-accent/20 animate-ping opacity-0 group-hover:opacity-100" />
               </div>
               <span className="font-sans text-xs font-black tracking-widest uppercase">
-                View Our Work
+                Explore Our Services
               </span>
             </button>
           </motion.div>
@@ -270,15 +271,15 @@ export default function Hero({ onBookClick, onWorkClick }: HeroProps) {
             {/* Bottom floating details */}
             <div className="absolute bottom-6 left-6 right-6 p-4 glassmorphism rounded-xl">
               <span className="text-[10px] font-bold text-brand-accent tracking-widest uppercase block mb-1">
-                TACTICAL INFILTRATION
+                ACT ON CREATION
               </span>
               <p className="text-xs font-semibold text-white/90">
-                Your Brand. Our Strategy. Real Impact.
+                We Help Brands Grow Through Creative &amp; Digital Solutions
               </p>
             </div>
           </motion.div>
 
-          {/* Floating Strategy Card (SEO, Branding, Ads, AI) */}
+          {/* Floating Strategy Card 1 (Content Creation, Video Editing, Creative Strategy) */}
           <motion.div
             initial={{ x: -50, y: 50, opacity: 0 }}
             animate={{ x: 0, y: 0, opacity: 1 }}
@@ -288,14 +289,14 @@ export default function Hero({ onBookClick, onWorkClick }: HeroProps) {
             <div className="flex items-center space-x-2 mb-3">
               <Zap className="w-4 h-4 text-brand-accent animate-pulse" />
               <span className="text-[10px] font-black tracking-widest text-white uppercase">
-                STRATEGY GRID
+                CONTENT LAB
               </span>
             </div>
             <div className="flex flex-wrap gap-1.5">
-              {["SEO", "Branding", "Ads", "AI Automation", "Websites"].map((tag) => (
+              {["Content Creation", "Video Editing", "Creative Strategy"].map((tag) => (
                 <span
                   key={tag}
-                  className="text-[9px] font-bold bg-white/5 border border-white/5 px-2.5 py-1 rounded-full text-brand-gray hover:text-white hover:border-brand-accent/30 hover:bg-brand-accent/5 transition-colors"
+                  className="text-[10px] font-bold bg-white/5 border border-white/5 px-2.5 py-1 rounded-full text-brand-gray hover:text-white hover:border-brand-accent/30 hover:bg-brand-accent/5 transition-colors"
                 >
                   {tag}
                 </span>
@@ -303,7 +304,32 @@ export default function Hero({ onBookClick, onWorkClick }: HeroProps) {
             </div>
           </motion.div>
 
-          {/* Floating Metrics Card */}
+          {/* Floating Strategy Card 2 (Social Media, Brand Growth, Performance Marketing) */}
+          <motion.div
+            initial={{ x: -40, y: -40, opacity: 0 }}
+            animate={{ x: 0, y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="absolute top-[40%] left-[-12%] glassmorphism p-5 rounded-2xl w-[220px] shadow-2xl border border-white/10 hidden lg:block hover:scale-105 transition-transform"
+          >
+            <div className="flex items-center space-x-2 mb-3">
+              <Sparkles className="w-4 h-4 text-brand-accent" />
+              <span className="text-[10px] font-black tracking-widest text-white uppercase">
+                GROWTH HUB
+              </span>
+            </div>
+            <div className="flex flex-wrap gap-1.5">
+              {["Social Media", "Brand Growth", "Performance Marketing"].map((tag) => (
+                <span
+                  key={tag}
+                  className="text-[10px] font-bold bg-white/5 border border-white/5 px-2.5 py-1 rounded-full text-brand-gray hover:text-white hover:border-brand-accent/30 hover:bg-brand-accent/5 transition-colors"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Floating Metrics Card 3 */}
           <motion.div
             initial={{ x: 50, y: -50, opacity: 0 }}
             animate={{ x: 0, y: 0, opacity: 1 }}
@@ -322,7 +348,7 @@ export default function Hero({ onBookClick, onWorkClick }: HeroProps) {
                 <span className="text-xs font-black text-white font-numbers">500+</span>
               </div>
               <div className="flex items-center justify-between border-b border-white/5 pb-1.5">
-                <span className="text-[10px] text-brand-gray font-semibold">Brands Scaled</span>
+                <span className="text-[10px] text-brand-gray font-semibold">Happy Clients</span>
                 <span className="text-xs font-black text-white font-numbers">100+</span>
               </div>
               <div className="flex items-center justify-between">

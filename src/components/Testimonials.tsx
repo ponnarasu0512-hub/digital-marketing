@@ -108,7 +108,7 @@ export default function Testimonials() {
               VALIDATED SUCCESS
             </span>
             <h3 className="font-display text-2xl md:text-3xl font-black text-white leading-tight">
-              What Category Leaders Say About Axoweb
+              What Category Leaders Say About Act On Creations
             </h3>
 
             {/* Testimonials Container */}
@@ -297,7 +297,7 @@ export default function Testimonials() {
             <div className="flex items-center justify-center space-x-6 text-[10px] font-black text-brand-gray tracking-wider uppercase">
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-0.5 border-t border-dashed border-white/40" />
-                <span>Pre-AXOWEB baseline</span>
+                <span>Pre-ACT ON baseline</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-1 bg-brand-accent rounded-full" />

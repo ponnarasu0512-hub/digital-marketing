@@ -8,7 +8,7 @@ export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [activeProject, setActiveProject] = useState<PortfolioProject | null>(null);
 
-  const categories = ["All", "Websites", "Branding", "SEO", "Social Media", "Ads", "Personal Branding"];
+  const categories = ["All", "Branding", "Social Media", "Content Creation", "Video Editing", "Marketing Campaigns", "Google Ads", "Meta Ads", "Web Design"];
 
   const filteredProjects = selectedCategory === "All"
     ? portfolioData
