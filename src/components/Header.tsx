@@ -89,7 +89,7 @@ export default function Header({ onBookClick }: HeaderProps) {
           {/* Right Side Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
-              href="https://wa.me/919876543210?text=Hello%20ACT%20ON%20Creation,%20I%20want%20to%20grow%20my%20business%20through%20Digital%20Marketing.%20Can%20we%20discuss?"
+              href="https://wa.me/919994951620?text=Hello%20ACT%20ON%20Creation,%0A%0AI%27m%20interested%20in%20your%20digital%20marketing%20services.%0ACan%20we%20discuss%20my%20project%3F"
               target="_blank"
               rel="noreferrer"
               className="flex items-center space-x-1 text-xs font-bold tracking-wider uppercase text-brand-gray hover:text-emerald-400 transition-colors py-2"
@@ -145,7 +145,7 @@ export default function Header({ onBookClick }: HeaderProps) {
               ))}
               <div className="pt-4 border-t border-white/5 flex flex-col space-y-3">
                 <a
-                  href="https://wa.me/919876543210?text=Hello%20ACT%20ON%20Creation,%20I%20want%20to%20grow%20my%20business%20through%20Digital%20Marketing.%20Can%20we%20discuss?"
+                  href="https://wa.me/919994951620?text=Hello%20ACT%20ON%20Creation,%0A%0AI%27m%20interested%20in%20your%20digital%20marketing%20services.%0ACan%20we%20discuss%20my%20project%3F"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-center space-x-2 px-3 py-3 rounded-lg bg-emerald-500/10 text-emerald-400 font-bold text-xs tracking-wider uppercase transition-colors"

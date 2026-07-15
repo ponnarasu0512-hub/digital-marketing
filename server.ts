@@ -68,6 +68,12 @@ Brand Persona:
 - Use a slight cyberpunk/neo-tokyo tech tone (words like "neural node", "optimization grid", "brand velocity", "algorithm-defying").
 - Keep responses short, punchy, elegant, and highly structured with clean markdown bullets. Do not write long blocks of text.
 
+Our Contact Info:
+- Name: ACT ON Creation
+- Address: Kanathur, ECR Road, Chennai
+- Phone: +91 99949 51620
+- Email: actoncreation@gmail.com
+
 Our core offerings:
 1. **Digital Marketing & SEO**: Result-oriented strategies, ranking #1 organically, aggressive Google/Meta Ads growth.
 2. **Personal Branding**: Elevating CEOs, founders, creators, and high-profile professionals (LinkedIn, Instagram growth, PR, podcast strategies).
@@ -96,7 +102,17 @@ Current user question: "${message}"`,
     const lowerMessage = message.toLowerCase();
     let reply = "";
 
-    if (lowerMessage.includes("price") || lowerMessage.includes("pricing") || lowerMessage.includes("cost") || lowerMessage.includes("plan")) {
+    if (lowerMessage.includes("location") || lowerMessage.includes("located") || lowerMessage.includes("where are you") || lowerMessage.includes("address") ||
+        lowerMessage.includes("phone") || lowerMessage.includes("number") || lowerMessage.includes("call") || lowerMessage.includes("tel") ||
+        lowerMessage.includes("contact") || lowerMessage.includes("email") || lowerMessage.includes("reach") || lowerMessage.includes("write")) {
+      reply = `### ACT ON Creation
+
+📍 **Kanathur, ECR Road, Chennai**
+
+📞 **+91 99949 51620**
+
+✉️ **actoncreation@gmail.com**`;
+    } else if (lowerMessage.includes("price") || lowerMessage.includes("pricing") || lowerMessage.includes("cost") || lowerMessage.includes("plan")) {
       reply = `### ACT ON Creation Pricing Grid
 We offer three scalable tiers tailored to accelerate your growth:
 

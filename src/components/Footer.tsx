@@ -15,6 +15,23 @@ export default function Footer({ onBookClick }: FooterProps) {
 
   return (
     <footer id="contact" className="relative bg-black text-white border-t border-white/5 pt-20 pb-8 overflow-hidden">
+      {/* Local Business JSON-LD Schema */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "ACT ON Creation",
+          "telephone": "+91 99949 51620",
+          "email": "actoncreation@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Kanathur, ECR Road",
+            "addressLocality": "Chennai",
+            "addressCountry": "India"
+          }
+        })}
+      </script>
+
       {/* Background radial spotlight */}
       <div className="absolute bottom-0 right-[15%] w-[400px] h-[400px] bg-brand-accent/5 rounded-full blur-[120px] pointer-events-none" />
 
@@ -39,7 +56,7 @@ export default function Footer({ onBookClick }: FooterProps) {
                 { icon: Linkedin, href: "#", name: "LinkedIn" },
                 { icon: Twitter, href: "#", name: "Twitter" },
                 { icon: Youtube, href: "#", name: "YouTube" },
-                { icon: MessageCircle, href: "https://wa.me/919876543210", name: "WhatsApp" }
+                { icon: MessageCircle, href: "https://wa.me/919994951620?text=Hello%20ACT%20ON%20Creation,%0A%0AI%27m%20interested%20in%20your%20digital%20marketing%20services.%0ACan%20we%20discuss%20my%20project%3F", name: "WhatsApp" }
               ].map((soc, i) => {
                 const IconComp = soc.icon;
                 return (
@@ -132,26 +149,25 @@ export default function Footer({ onBookClick }: FooterProps) {
           {/* Column 5: Contact details */}
           <div className="lg:col-span-3 space-y-4">
             <h4 className="text-[10px] font-black text-brand-accent tracking-widest uppercase">
-              AGENCY TELEMETRY
+              CONTACT INFO
             </h4>
             <ul className="space-y-3 text-xs font-semibold text-brand-gray">
               <li className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-brand-accent flex-shrink-0" />
-                <a href="tel:+919876543210" className="hover:text-white transition-colors font-numbers">
-                  +91 98765 43210
+                <a href="tel:+919994951620" className="hover:text-white transition-colors font-numbers">
+                  +91 99949 51620
                 </a>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-brand-accent flex-shrink-0" />
-                <a href="mailto:contact@actoncreations.com" className="hover:text-white transition-colors">
-                  contact@actoncreation.com
+                <a href="mailto:actoncreation@gmail.com" className="hover:text-white transition-colors">
+                  actoncreation@gmail.com
                 </a>
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin className="w-4 h-4 text-brand-accent flex-shrink-0 mt-0.5" />
                 <span>
-                  Indiranagar, Bangalore, India<br />
-                  Shinjuku, Tokyo, Japan
+                  Kanathur, ECR Road, Chennai
                 </span>
               </li>
             </ul>

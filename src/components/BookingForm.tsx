@@ -227,7 +227,7 @@ export default function BookingForm() {
                     required
                     value={formData.phone}
                     onChange={handleInputChange}
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 99949 51620"
                     className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-xs font-semibold text-white focus:outline-none focus:border-brand-accent/50 transition-colors"
                   />
                 </div>
@@ -451,8 +451,8 @@ export default function BookingForm() {
               <span className="text-[10px] font-black tracking-widest text-brand-accent uppercase block mb-1">
                 TRANSMISSION VERIFIED
               </span>
-              <h3 className="font-display text-xl font-black text-white mb-2">
-                Strategy Session Booked!
+              <h3 className="font-display text-lg font-black text-white mb-2">
+                Thank you for booking with ACT ON Creation!
               </h3>
               
               <div className="bg-black/30 border border-white/5 p-4 rounded-xl text-left text-xs space-y-2 mt-4 mb-6">
@@ -474,9 +474,14 @@ export default function BookingForm() {
                 </div>
               </div>
 
-              <p className="text-[11px] text-brand-gray font-semibold leading-relaxed mb-6">
-                We have dispatched a Google Calendar invitation and access links to your business inbox. Let's scale your business.
-              </p>
+              <div className="text-xs text-brand-gray font-medium space-y-3 mb-6">
+                <p className="text-white font-semibold">
+                  "Our team will contact you shortly at the phone number or email you provided."
+                </p>
+                <p className="text-brand-gray/80">
+                  "Thank you for contacting ACT ON Creation. We'll get back to you as soon as possible."
+                </p>
+              </div>
 
               <button
                 onClick={resetForm}

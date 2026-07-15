@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "motion/react";
-import { teamData } from "../data";
 import { Award, Compass, HeartHandshake, Eye, Sparkles, MessageSquare, BarChart, Trophy, ShieldCheck } from "lucide-react";
 
 export default function Team() {
@@ -37,48 +36,25 @@ export default function Team() {
 
         {/* Team Members Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-          {teamData.map((member) => (
+          {[1, 2, 3, 4].map((index) => (
             <motion.div
-              key={member.id}
+              key={index}
               whileHover={{ y: -6 }}
-              className="bg-brand-secondary/40 border border-white/5 rounded-2xl overflow-hidden glassmorphism flex flex-col justify-between group hover:border-brand-accent/20 transition-all"
+              className="bg-brand-secondary/40 border border-white/5 rounded-2xl overflow-hidden glassmorphism flex flex-col justify-between group hover:border-brand-accent/25 hover:shadow-[0_0_25px_rgba(255,45,45,0.06)] transition-all duration-300"
             >
-              {/* Member Visual with Cyber red-tint filters on hover */}
-              <div className="h-[280px] overflow-hidden relative">
-                <img
-                  src={member.imageUrl}
-                  alt={member.name}
-                  className="w-full h-full object-cover grayscale brightness-90 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-secondary via-transparent to-transparent" />
+              {/* Premium Blank Placeholder Area with Cyber vibes */}
+              <div className="h-[280px] overflow-hidden relative bg-gradient-to-br from-brand-secondary/80 via-black/50 to-brand-black/90 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-transparent to-transparent" />
+                
+                {/* Subtle digital grid background overlay */}
+                <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:14px_24px]" />
                 
                 {/* Horizontal glowing neon visor details when hovering to give extreme Japanese Cyberpunk vibes! */}
                 <div className="absolute top-[40%] left-[30%] w-[40%] h-[2px] bg-brand-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 box-glow shadow-[0_0_8px_#ff2d2d]" />
-              </div>
-
-              {/* Body Content */}
-              <div className="p-5 space-y-3">
-                <div>
-                  <h3 className="font-display text-base font-bold text-white tracking-tight group-hover:text-brand-accent transition-colors">
-                    {member.name}
-                  </h3>
-                  <span className="text-[10px] font-bold text-brand-accent uppercase tracking-wider block">
-                    {member.role}
-                  </span>
-                </div>
-
-                <p className="text-brand-gray text-[10px] leading-relaxed font-semibold">
-                  {member.bio}
-                </p>
-
-                {/* Specialties tags */}
-                <div className="flex flex-wrap gap-1 mt-3 border-t border-white/5 pt-3">
-                  {member.specialties.slice(0, 2).map((spec, i) => (
-                    <span key={i} className="text-[8px] font-bold text-white/60 bg-white/5 px-2 py-0.5 rounded uppercase">
-                      {spec}
-                    </span>
-                  ))}
+                
+                {/* Stylized plus placeholder with premium transition */}
+                <div className="w-10 h-10 rounded-full border border-white/5 bg-white/[0.01] flex items-center justify-center text-white/20 group-hover:text-brand-accent/50 group-hover:border-brand-accent/30 group-hover:bg-brand-accent/[0.03] transition-all duration-300">
+                  <span className="text-lg font-light font-sans">+</span>
                 </div>
               </div>
             </motion.div>
