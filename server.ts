@@ -1,7 +1,6 @@
 import express from "express";
 import path from "path";
 import dotenv from "dotenv";
-import { createServer as createViteServer } from "vite";
 import { GoogleGenAI } from "@google/genai";
 
 dotenv.config();
@@ -239,12 +238,13 @@ app.get("/api/contact", (req, res) => {
 async function initServer() {
   if (process.env.NODE_ENV !== "production") {
     console.log("Starting server in development mode with Vite middleware...");
+    const { createServer: createViteServer } = await import("vite");
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",
     });
     app.use(vite.middlewares);
-  } else {
+  } else if (!process.env.VERCEL) {
     console.log("Starting server in production mode...");
     const distPath = path.join(process.cwd(), "dist");
     app.use(express.static(distPath));
@@ -258,6 +258,10 @@ async function initServer() {
   });
 }
 
-initServer().catch((err) => {
-  console.error("Failed to initialize ACT ON Creation fullstack server:", err);
-});
+if (!process.env.VERCEL) {
+  initServer().catch((err) => {
+    console.error("Failed to initialize ACT ON Creation fullstack server:", err);
+  });
+}
+
+export default app;
