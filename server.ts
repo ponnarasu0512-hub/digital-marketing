@@ -11,12 +11,15 @@ const PORT = 3000;
 
 app.use(express.json());
 
-// Lazy-initialize Gemini client
+// Lazy-initialize Gemini client with dynamic key-change detection
 let aiClient: GoogleGenAI | null = null;
+let lastApiKey: string | undefined = undefined;
+
 function getGeminiClient() {
-  if (!aiClient) {
-    const apiKey = process.env.GEMINI_API_KEY;
-    if (apiKey && apiKey !== "MY_GEMINI_API_KEY" && apiKey.trim() !== "") {
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (apiKey !== lastApiKey) {
+    lastApiKey = apiKey;
+    if (apiKey && apiKey !== "MY_GEMINI_API_KEY" && apiKey.trim() !== "" && apiKey !== "undefined") {
       aiClient = new GoogleGenAI({
         apiKey,
         httpOptions: {
@@ -25,6 +28,8 @@ function getGeminiClient() {
           },
         },
       });
+    } else {
+      aiClient = null;
     }
   }
   return aiClient;
