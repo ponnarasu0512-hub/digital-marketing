@@ -21,6 +21,7 @@ export default function Chatbot() {
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messageEndRef = useRef<HTMLDivElement | null>(null);
+  const [isKeyConfigured, setIsKeyConfigured] = useState<boolean | null>(null);
 
   const suggestedQuestions = [
     "Academy Courses",
@@ -35,6 +36,24 @@ export default function Chatbot() {
       messageEndRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [messages, isLoading]);
+
+  useEffect(() => {
+    const verifyKeyOnServer = async () => {
+      try {
+        const response = await fetch("/api/chat/status");
+        if (response.ok) {
+          const data = await response.json();
+          setIsKeyConfigured(data.configured);
+        } else {
+          setIsKeyConfigured(false);
+        }
+      } catch (err) {
+        console.error("Failed to verify server-side AI key status:", err);
+        setIsKeyConfigured(false);
+      }
+    };
+    verifyKeyOnServer();
+  }, []);
 
   const handleSendMessage = async (text: string) => {
     if (!text.trim()) return;
@@ -139,10 +158,15 @@ export default function Chatbot() {
                 </div>
                 <div>
                   <h3 className="font-display text-xs font-black text-white tracking-wide flex items-center gap-1.5">
-                    Act On AI <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    Act On AI <span className={`w-1.5 h-1.5 rounded-full animate-pulse ${isKeyConfigured === true ? "bg-emerald-400" : isKeyConfigured === false ? "bg-amber-500" : "bg-brand-gray"}`} />
                   </h3>
-                  <span className="text-[9px] font-bold text-brand-gray uppercase tracking-widest block">
+                  <span className="text-[9px] font-bold text-brand-gray uppercase tracking-widest flex items-center gap-1.5">
                     Growth Concierge
+                    {isKeyConfigured !== null && (
+                      <span className={`text-[7px] px-1 py-0.2 rounded font-black tracking-wider ${isKeyConfigured ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20" : "bg-amber-500/10 text-amber-400 border border-amber-500/20"}`}>
+                        {isKeyConfigured ? "AI LIVE" : "SANDBOX"}
+                      </span>
+                    )}
                   </span>
                 </div>
               </div>
@@ -154,6 +178,17 @@ export default function Chatbot() {
                 <X className="w-5 h-5" />
               </button>
             </div>
+
+            {/* API Key Missing Banner */}
+            {isKeyConfigured === false && (
+              <div className="bg-rose-500/10 border-b border-rose-500/20 px-4 py-2.5 flex items-start gap-2 text-[10px] font-semibold text-rose-300">
+                <Zap className="w-4 h-4 text-rose-400 shrink-0 mt-0.5 animate-pulse" />
+                <div>
+                  <span className="font-bold block uppercase tracking-wider text-rose-400">Sandbox Mode Active</span>
+                  The Gemini API key is missing or not configured on the server. Run-time interactions are utilizing our offline intelligence fallback.
+                </div>
+              </div>
+            )}
 
             {/* Conversation Messages Board */}
             <div className="flex-1 overflow-y-auto p-4 space-y-4">

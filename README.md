@@ -1,20 +1,40 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# ACT ON Creation ⛩️
+> *We Help Brands Grow Through Creative & Digital Solutions*
 
-# Run and deploy your AI Studio app
+ACT ON Creation is a world-class premium digital marketing, SEO, personal branding, and high-performance web development agency website.
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/50ebabe6-8b29-4918-a4f4-0b47e84889ea
+## 💎 Features
 
-## Run Locally
+- 🏎️ **Ultra-Premium Cyber Aesthetic**: Visual style utilizing dark modes, precise crimson glowing borders, micro-interactions, and fluid responsive layouts.
+- 💬 **Act On AI Virtual Concierge**: A custom embedded floating chatbot capable of live conversation or intelligent sandbox fallback mode if API keys are missing.
+- 📈 **Strategy Booking System**: Full interactive strategy appointment calendar form handling budgets, service requests, and scheduling.
+- 🎨 **Modular Component Architecture**: Extensively optimized React 19 codebase with separate widgets for About, Portfolio, FAQ, Testimonials, and Services.
 
-**Prerequisites:**  Node.js
+---
 
+## 🚀 Getting Started
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### 📦 Installation
+
+To install project dependencies:
+```bash
+npm install
+```
+
+### 💻 Local Development
+
+To spin up the full-stack server running Vite development middleware and Express backend simultaneously:
+```bash
+npm run dev
+```
+The server will boot up and bind to `http://localhost:3000`.
+
+---
+
+## ☁️ Production Deployment
+
+This application is ready to be deployed to production clouds (such as Cloud Run or Vercel).
+
+For detailed instructions on mapping the **Gemini AI service API keys** during deployment, refer to the **[Deployment Guide](./DEPLOYMENT.md)**.

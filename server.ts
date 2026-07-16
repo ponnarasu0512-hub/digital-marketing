@@ -1,6 +1,7 @@
 import express from "express";
 import path from "path";
 import dotenv from "dotenv";
+import { createServer as createViteServer } from "vite";
 import { GoogleGenAI } from "@google/genai";
 
 dotenv.config();
@@ -10,15 +11,12 @@ const PORT = 3000;
 
 app.use(express.json());
 
-// Lazy-initialize Gemini client with dynamic key-change detection
+// Lazy-initialize Gemini client
 let aiClient: GoogleGenAI | null = null;
-let lastApiKey: string | undefined = undefined;
-
 function getGeminiClient() {
-  const apiKey = process.env.GEMINI_API_KEY;
-  if (apiKey !== lastApiKey) {
-    lastApiKey = apiKey;
-    if (apiKey && apiKey !== "MY_GEMINI_API_KEY" && apiKey.trim() !== "" && apiKey !== "undefined") {
+  if (!aiClient) {
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (apiKey && apiKey !== "MY_GEMINI_API_KEY" && apiKey.trim() !== "") {
       aiClient = new GoogleGenAI({
         apiKey,
         httpOptions: {
@@ -27,8 +25,6 @@ function getGeminiClient() {
           },
         },
       });
-    } else {
-      aiClient = null;
     }
   }
   return aiClient;
@@ -41,6 +37,18 @@ const contactSubmissions: any[] = [];
 // API: Health check
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok", time: new Date().toISOString() });
+});
+
+// API: Verify if GEMINI_API_KEY is configured on the server
+app.get("/api/chat/status", (req, res) => {
+  const apiKey = process.env.GEMINI_API_KEY;
+  const isConfigured = !!(apiKey && apiKey !== "MY_GEMINI_API_KEY" && apiKey.trim() !== "");
+  res.json({
+    configured: isConfigured,
+    message: isConfigured 
+      ? "Gemini API service is active and fully operational." 
+      : "Gemini API key is missing or holds a placeholder value. Operating in intelligent sandbox mode."
+  });
 });
 
 // API: AI Chatbot Proxy using Gemini API
@@ -238,13 +246,12 @@ app.get("/api/contact", (req, res) => {
 async function initServer() {
   if (process.env.NODE_ENV !== "production") {
     console.log("Starting server in development mode with Vite middleware...");
-    const { createServer: createViteServer } = await import("vite");
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",
     });
     app.use(vite.middlewares);
-  } else if (!process.env.VERCEL) {
+  } else {
     console.log("Starting server in production mode...");
     const distPath = path.join(process.cwd(), "dist");
     app.use(express.static(distPath));
@@ -258,10 +265,6 @@ async function initServer() {
   });
 }
 
-if (!process.env.VERCEL) {
-  initServer().catch((err) => {
-    console.error("Failed to initialize ACT ON Creation fullstack server:", err);
-  });
-}
-
-export default app;
+initServer().catch((err) => {
+  console.error("Failed to initialize ACT ON Creation fullstack server:", err);
+});
